@@ -12,9 +12,10 @@ class Api::CarsController < ApplicationController
 
   def create
     @car = Car.new(
-      make: "Toyota",
-      model: "Supra",
-      year: 1994)
+      make: params[:make],
+      model: params[:model],
+      year: params[:year],
+    )
     @car.save
     render "show.json.jb"
   end
