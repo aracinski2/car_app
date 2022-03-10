@@ -1,3 +1,7 @@
-{
-  message: @cars
-}
+@cars.map do |car|
+  {
+    make: car.make,
+    model: car.model,
+    year: car.year,
+  }
+end

@@ -1,0 +1,5 @@
+{
+  make: @car.make,
+  model: @car.model,
+  year: @car.year,
+}
