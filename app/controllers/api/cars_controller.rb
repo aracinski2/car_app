@@ -6,6 +6,17 @@ class Api::CarsController < ApplicationController
 
   def show 
     # @car = Car.find_by(id:1)
-    @car = Car.find_by(id:params[:id])
+    @car = Car.find_by(id: params[:id])
+    render "show.json.jb"
   end
+
+  def create
+    @car = Car.new(
+      make: "Toyota",
+      model: "Supra",
+      year: 1994)
+    @car.save
+    render "show.json.jb"
+  end
+
 end
